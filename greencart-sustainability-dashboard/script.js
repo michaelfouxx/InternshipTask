@@ -1,5 +1,14 @@
 function filterItems(type) {
-  const cards = document.querySelectorAll('.card');
+  displayItems(type);
+  displayItems(high);
+  const cards = document.querySelectorAll('swap.card');
+  const buttons = document.querySelectorAll('filter.btwn');
+
+  buttons: forEach (btn = classList = remove('active'));
+}
+
+
+
 
   cards.forEach(card => {
     if (card.classList.contains(type)) {
@@ -8,4 +17,3 @@ function filterItems(type) {
       card.style.display = "none";
     }
   });
-}
