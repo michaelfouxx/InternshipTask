@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
+}
+
+.card {
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.high {
+  background-color: #ffe5e5;
+}
+
+.low {
+  background-color: #e5ffe5;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
