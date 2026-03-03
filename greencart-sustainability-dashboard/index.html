@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-    <title>Sustainability Dashboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <title>Sustainability Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -13,80 +13,78 @@
   <p>Track your grocery choices and make sustainable choices.</p>
 </header>
 
-  <main class="dashboard container">
+<main class="dashboard container">
 
-    <section class="card co2-card" aria-labelledby="co2-heading">
-    <h2 id="co2-heading"CO₂ Savings</h2>
-    
-      <div class="co2-display">
-        <span id="co2Value">0</span>
-        <span class="class=unit">kg saved this month</span>
-      </div>
 
-    </div> class="progress-bar"
-      <div class="progress-fill" id="progressFill"></div>
-  </div>
+  <section class="card co2-card" aria-labelledby="co2-heading">
+    <h2 id="co2-heading">CO₂ Savings</h2>
 
-      <p class="goal-text">Monthly Goal: 20kg CO₂</p>
-    </section>
-
-    <section class="card-filter-card" aria-labelledby="filter-heading">
-    <h2 id="filter-heding">Filter by Environmental Impact</h2>
-
-    <div class="topple-group" role="group" aria-label="Impact filter"
-      <button class="filter-btn active" data-filter="all">All</button>"
-      <button class="filter-btn" datafilter="high"></button>High Impact</button>
-      <button class="filter-btn" datafilter="low"></button>Low Impact</button>
+    <div class="co2-display">
+      <span id="co2Value">0</span> kg saved this month
     </div>
-    </section>
 
-    <section class="card food-card" aria-labelledby="food-heading"
-      <h2 id="food-heading">Food Items</h2>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
 
-      <div class=""fod-grid">
-      
-          <article class="food-item high" data-ipact="high">
-            <h3>Beef</h3>
-            <p> Very high carbon footprint due to livestock emissions</p>
-          </article>
-
-          <article class="food-item low" data-ipact="low">
-            <h3>Lentils</h3>
-            <p> Low carbon footprint and plant-based protein source</p>
-          </article>
-
-          <article class="food-item high" data-ipact="high">
-            <h3>Dairy Milk</h3>
-            <p> High emissions from dairy farming processes</p>
-          </article>
-
-          <article class="food-item low" data-ipact="low">
-            <h3>Oat Milk</h3>
-            <p> Lower environmental impact compared to dairy milk</p>
-          </article>
-
-          </div>
-        </section>
-
-        <section class="card swaps-card" aria-labelledby=""swaps-heading"
-        <h2 id="swaps-heading">Sustainable Swaps</h2>
-
-        <div class="swap">
-          <p><strong>Swap:</strong> Beef → Lentils</p>
-          <p>Reduce emissions by up to 70%</p>
-          </div>
-
-          <div class="swap">
-          <p><strong>Swap:</strong> Milk → Oats Milk</p>
-          <p>Reduce emissions by up to 50</p>
-        </div>
-
-      </section>
-
-    </main>
-
-  </script src="sustainability.js"></script>
-  </body>
-  </html>
+    <p class="goal-text">Monthly Goal: 20kg CO₂</p>
+  </section>
 
 
+  <section class="card filter-card" aria-labelledby="filter-heading">
+    <h2 id="filter-heading">Filter by Environmental Impact</h2>
+
+    <div class="button-group" role="group" aria-label="Impact filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="high">High Impact</button>
+      <button class="filter-btn" data-filter="low">Low Impact</button>
+    </div>
+  </section>
+
+
+  <section class="card food-card" aria-labelledby="food-heading">
+    <h2 id="food-heading">Food Items</h2>
+
+    <div class="food-grid">
+      <article class="food-item high" data-impact="high">
+        <h3>Beef</h3>
+        <p>Very high carbon footprint due to livestock emissions</p>
+      </article>
+
+      <article class="food-item low" data-impact="low">
+        <h3>Lentils</h3>
+        <p>Low carbon footprint and plant-based protein source</p>
+      </article>
+
+      <article class="food-item high" data-impact="high">
+        <h3>Dairy Milk</h3>
+        <p>High emissions from dairy farming processes</p>
+      </article>
+
+      <article class="food-item low" data-impact="low">
+        <h3>Oat Milk</h3>
+        <p>Lower environmental impact compared to dairy milk</p>
+      </article>
+    </div>
+  </section>
+
+
+  <section class="card swaps-card" aria-labelledby="swaps-heading">
+    <h2 id="swaps-heading">Sustainable Swaps</h2>
+
+    <div class="swap">
+      <p><strong>Swap:</strong> Beef → Lentils</p>
+      <p>Reduce emissions by up to 70%</p>
+    </div>
+
+    <div class="swap">
+      <p><strong>Swap:</strong> Milk → Oat Milk</p>
+      <p>Reduce emissions by up to 50%</p>
+    </div>
+  </section>
+
+</main>
+
+<script src="sustainability.js"></script>
+</body>
+</html>
