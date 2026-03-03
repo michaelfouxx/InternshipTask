@@ -7,9 +7,10 @@ const progressFill = document.getElementById("progressFill")
   let co2Saved = 12.4;
   let monthlyGoal = 20;
 
-  co2Display.textContent = co2Saved;
+  co2Display.textContent = co2Saved.toFixed(1);
 
   let progressPercentage = (co2Saved / monthlyGoal) * 100;
+  progressPercentage = Math.min(progressPercentage , 100);
   progressFill.style.width = progressPercentage + "%";
 
   filterButtons.forEach(button => { 
@@ -24,14 +25,10 @@ const progressFill = document.getElementById("progressFill")
 
       foodItems.forEach(item => {
 
-        if (filterValue === "all") {
-          item.style.display = "block";
-        }
-        else if (item.dataset.impact === filterValue){
-          item.style.display = "block";
-        }
-        else{
-          item.style.display = "none";
+      if (filterValue === "all" || item.dataset.impact === filterValue) {
+        item.style.display ="";
+      } else {     
+        item.style.display = "none";
         }
         
       });
