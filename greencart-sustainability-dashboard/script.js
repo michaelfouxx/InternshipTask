@@ -90,7 +90,7 @@ filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     filterBtns.forEach(b => {
       b.classList.remove('active')
-      b.setAttribute('aria-pressed; , 'false');
+      b.setAttribute('aria-pressed' , 'false');
      });
 
      btn.classList.add('active');
