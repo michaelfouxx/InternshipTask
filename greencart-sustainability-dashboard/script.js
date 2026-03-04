@@ -8,8 +8,8 @@ const emptyState  = document.getElementById('emptyState');
 const highCountEl = document.getElementById('highCount');
 const lowCountEl  = document.getElementById('lowCount');
 
-  let co2Saved = 12.4;
-  let monthlyGoal = 20;
+ const CO2_SAVED    = 12.4;
+ const MONTHLY_GOAL = 20;
 
   co2Display.textContent = co2Saved.toFixed(1);
 
