@@ -21,9 +21,10 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f2f7f4;
-  color: #333;
+  font-family: 'DM Sans',sans-serif;
+  background-color: var(--sand);
+  color: var(--ink);
+  min-height:100vh;
 }
 
 .dashboard-header {
