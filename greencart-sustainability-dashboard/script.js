@@ -10,10 +10,11 @@ const foodItems   = document.querySelectorAll('.food-item');
 const emptyState  = document.getElementById('emptyState');
 const highCountEl = document.getElementById('highCount');
 const lowCountEl  = document.getElementById('lowCount');
+const searchInput = document.getElementById('searchInput');
 
-searchInput.addEventListener('inpur', () => {
+searchInput.addEventListener('input', () => {
   const query = searchInput.value.toLowerCase();
-  foodItems.forEach(item => {
+   foodItems.forEach(item => {
     const name = item.querySelector('h3').textContent.toLowerCase();
     const matches = name.includes(query);
     item.classList.toggle('collapsed', !matches);
