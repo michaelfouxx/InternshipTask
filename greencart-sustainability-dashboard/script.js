@@ -64,7 +64,7 @@ function updateChips(filter) {
 function applyFilter(filter) {
   let visibleCount = 0;
 
-  foodItems.foreEach(item => {
+  foodItems.forEach(item => {
     const matches = filter === 'all' || item.dataset.impact === filter;
 
     if (matches) {
