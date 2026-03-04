@@ -74,7 +74,7 @@ function applyFilter(filter) {
       visibleCount++;
     } else {
       item.classList.add('hidden');
-      item.addEventListener('transitioned', () => {
+      item.addEventListener('transitionend', () => {
         if (item.classList.contains('hidden')) {
           item.classList.add('collapsed');
         }
