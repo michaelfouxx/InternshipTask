@@ -59,30 +59,41 @@ function updateChips(filter) {
   highCountEl.textContent = `🔴 ${high} high impact;`
   lowCountEl.textContent =  `🟢 ${low} low impact`;
 
-  filterButtons.forEach(button => { 
-    
-    button.addEventListener("click", () => {
+function applyFilter(filter) {
+  let visibleCount = 0;
 
-      filterButtons.forEach(btn => {
-        btn.classList.remove("active");
-        btn.setAttribute("aria-pressed", "false");
-      });
+  foodItems.foreEach(item => {
+    const matches = filter === 'all' || item.dataset.impact === filter;
 
-      button.classList.add("active");
-      button.setAttribute("aria-pressed", "true");
-
-      const filterValue = button.dataset.filter;
-
-      foodItems.forEach(item => {
-
-      if (filterValue === "all" || item.dataset.impact === filterValue) {
-        item.classList.remove("hidden");
-      } else {     
-        item.classList.add("hidden");
+    if (matches) {
+      item,classList.remove('collapsed');
+      item.offsetHeight;
+      item.classList.remove('hidden');
+      visibleCount++;
+    } else {
+      item.classList.add('hidden');
+      item.addEventListener('transitioned', () => {
+        if (item.classList.contains('hidden')) {
+          item.classList.add('collapsed');
         }
-        
-      });
+      },  { once: true});
+    }
+  });
 
-    });
+  emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+  updateChips(filter);
+}
 
+filterBtns.forEach(btn => {
+  btn.addEventLlistener('click', () => {
+    filterBtns.forEach(b => {
+      b.classList.remobe('active');
+      b.setAttribute('aria-pressed; , 'false');
+     });
+
+     btn.classList.add('active');
+     btn.setAttribute('aria-pressed' , 'true');
+
+     applyFilter(btn.dataset.filter);
+  });
 });
