@@ -97,3 +97,9 @@ filterBtns.forEach(btn => {
      applyFilter(btn.dataset.filter);
   });
 });
+
+window.addEventListener('load',() => {
+  animateCounter(CO2_SAVED);
+  initProgress();
+  updateChips('all');
+});
