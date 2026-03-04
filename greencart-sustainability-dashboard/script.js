@@ -28,9 +28,19 @@ function animateCounter(target, duration = 1200) {
     }
   }
 
-  let progressPercentage = (co2Saved / monthlyGoal) * 100;
-  progressPercentage = Math.min(progressPercentage , 100);
-  progressFill.style.width = progressPercentage + "%";
+function initProgress() {
+  const pct = Math.min((CO2_SAVED / MONTHLY_GOAL) * 100,100);
+  progressEl.style.width = pct + '%';
+  progressBar.setAttribute('aria-valuenow', Math.round(pct));
+
+  if (pct>= 100) {
+    co2Badge.textContent = 'Goal reached!';
+  } else if (pct>= 60) {
+    co2Badge.textContent = 'On track';
+  } else {
+    co2Badge.textContent = 'Keep going';
+  }
+}
 
   filterButtons.forEach(button => { 
     
