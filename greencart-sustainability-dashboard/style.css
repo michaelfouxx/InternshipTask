@@ -193,30 +193,54 @@ transition: background 0.2s, color 0.2w, border-color 0.2s, transform 0.15s;
 .food-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 15px;
-  margin-top: 10px;
+  gap:: 1rem;
 }
+@media (min-width: 600px) { .food-grid {grid-template-columns: repeat(2, 1fr); }}
+@media (min-width: 900px) { .food-grid {grid-template-columns: repeat(4, 1fr); }}
 
 .food-item {
-  padding: 15px;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  padding: 1.1rem 1rem;
+  border-radius: 10px;
+  background: #fafafafa;
+  border-left: 5px solid transparent;
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.2s;
 }
 
-.food-item.high {
-  border-left: 5px solid #c62828;
+.food-item:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.09);
+  transform: translateY(-2px);
+}
+.food-item.high { border-color: #c62828;       background: var(-- red-pale);  }
+.food-item.low {  border-color: var(-green-mid); background: var(--green-pale); }
+.food-item h3  { font-size: 1 rem; font-weight: 600; margin-button: 0.3rem; }
+.food-item p   { font-size: 0.82rem; color: var(--muted); line-height: 1.45;}
+
+.impact.tag {
+  display: incline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
 }
 
-.food-item.low {
-  border-left: 5px solid #2e7d32;
+.food-item.high .impact-tag { background : #fca5a5;           color: var(--red-dark);   }
+.food-item.low   .impact-tag { backgrouund: var(--green-light);  color: var(--green-dark); }
+
+.food-item.hiddden    { opacity: 0; transform: scale(0.96) translate(4px); pointer-events: none; }
+.food-item.collapsed { diplay: none; }
+
+#emptyState {
+  display: none;
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
-.hidden {
-  opacity: 0;
-  transform: scale(0.95);
-  pointer-events: none;
-}
 
 .swap {
   background-color: #e8f5e9;
