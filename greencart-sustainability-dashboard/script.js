@@ -12,14 +12,6 @@ const highCountEl = document.getElementById('highCount');
 const lowCountEl  = document.getElementById('lowCount');
 const searchInput = document.getElementById('searchInput');
 
-searchInput.addEventListener('input', () => {
-  const query = searchInput.value.toLowerCase();
-   foodItems.forEach(item => {
-    const name = item.querySelector('h3').textContent.toLowerCase();
-    const matches = name.includes(query);
-    item.classList.toggle('collapsed', !matches);
-  });
-});
 
 function animateCounter(target, duration = 1200) {
   const start = performance.now();
@@ -70,6 +62,15 @@ function updateChips(filter) {
   highCountEl.textContent = `🔴 ${high} high impact`;
   lowCountEl.textContent =  `🟢 ${low} low impact`;
 }
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase();
+   foodItems.forEach(item => {
+    const name = item.querySelector('h3').textContent.toLowerCase();
+    const matches = name.includes(query);
+    item.classList.toggle('collapsed', !matches);
+  });
+});
 
 function applyFilter(filter) {
   let visibleCount = 0;
