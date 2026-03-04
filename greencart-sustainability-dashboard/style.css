@@ -302,3 +302,11 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.04rem;
 }
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  border-top: 1px solid #e5e7eb;
+}
