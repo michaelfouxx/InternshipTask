@@ -19,14 +19,15 @@ function animateCounter(target, duration = 1200) {
     const progress = Math.min(elapsed / duration,1);
     const eased    = 1 - Math.pow(1 - progress, 3);
 
-    co2ValueEl.textContent = target * eased).toFixed(1);
+    co2ValueEl.textContent = (target * eased).toFixed(1);
 
     if (progress<1) {
       requestAnimationFrame(tick);
     } else {
-      co2ValueEl. textContent = target.toFixed(1);
+      co2ValueEl.textContent = target.toFixed(1);
     }
-  }
+  });
+}
 
 function initProgress() {
   const pct = Math.min((CO2_SAVED / MONTHLY_GOAL) * 100,100);
