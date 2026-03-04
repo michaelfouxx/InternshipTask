@@ -11,6 +11,15 @@ const emptyState  = document.getElementById('emptyState');
 const highCountEl = document.getElementById('highCount');
 const lowCountEl  = document.getElementById('lowCount');
 
+searchInput.addEventListener('inpur', () => {
+  const query = searchInput.value.toLowerCase();
+  foodItems.forEach(item => {
+    const name = item.querySelector('h3').textContent.toLowerCase();
+    const matches = name.includes(query);
+    item.classList.toggle('collapsed', !matches);
+  });
+});
+
 function animateCounter(target, duration = 1200) {
   const start = performance.now();
 
