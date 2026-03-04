@@ -34,11 +34,11 @@ function initProgress() {
   progressBar.setAttribute('aria-valuenow', Math.round(pct));
 
   if (pct>= 100) {
-    co2Badge.textContent = 'Goal reached!';
+    co2Badge.textContent = '🎉 Goal  reached!';
   } else if (pct>= 60) {
-    co2Badge.textContent = 'On track';
+    co2Badge.textContent = '🌱 On track';
   } else {
-    co2Badge.textContent = 'Keep going';
+    co2Badge.textContent = '💪 Keep going';
   }
 }
 
