@@ -1,8 +1,12 @@
-const filterButtons = document.querySelectorAll(".filter-btn");
-const foodItems = document.querySelectorAll(".food-item");
-const co2Display = document.getElementById("co2Value");
-const progressFill = document.getElementById("progressFill")
-
+const co2ValueEl  = document.getElementById('co2Value');
+const progressEl  = document.getElementById('progressFill');
+const progressBar = progressEl.parentElement;
+const co2Badge    = document.getElementById('co2Badge');
+const filterBtns  = document.querySelectorAll('.filter-btn');
+const foodItems   = document.querySelectorAll('.food-item');
+const emptyState  = document.getElementById('emptyState');
+const highCountEl = document.getElementById('highCount');
+const lowCountEl  = document.getElementById('lowCount');
 
   let co2Saved = 12.4;
   let monthlyGoal = 20;
