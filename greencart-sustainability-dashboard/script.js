@@ -68,7 +68,7 @@ function applyFilter(filter) {
     const matches = filter === 'all' || item.dataset.impact === filter;
 
     if (matches) {
-      item,classList.remove('collapsed');
+      item.classList.remove('collapsed');
       item.offsetHeight;
       item.classList.remove('hidden');
       visibleCount++;
