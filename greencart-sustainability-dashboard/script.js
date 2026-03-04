@@ -25,10 +25,10 @@ const progressFill = document.getElementById("progressFill")
 
       foodItems.forEach(item => {
 
-      if (filterValue === "all" || item.dataset.impact === filterValue) {
-        item.style.display ="";
+      if (filterValue === "all" || item.dataset.impact === filter.Value) {
+        item.classList.remove("hidden");
       } else {     
-        item.style.display = "none";
+        item.classList.add("hidden");
         }
         
       });
