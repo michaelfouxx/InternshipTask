@@ -59,6 +59,7 @@ function updateChips(filter) {
 
   highCountEl.textContent = `🔴 ${high} high impact`;
   lowCountEl.textContent =  `🟢 ${low} low impact`;
+}
 
 function applyFilter(filter) {
   let visibleCount = 0;
