@@ -87,7 +87,7 @@ function applyFilter(filter) {
 }
 
 filterBtns.forEach(btn => {
-  btn.addEventLlistener('click', () => {
+  btn.addEventListener('click', () => {
     filterBtns.forEach(b => {
       b.classList.remobe('active');
       b.setAttribute('aria-pressed; , 'false');
