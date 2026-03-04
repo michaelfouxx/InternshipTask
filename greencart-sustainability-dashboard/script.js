@@ -1,3 +1,6 @@
+ const CO2_SAVED    = 12.4;
+ const MONTHLY_GOAL = 20;
+
 const co2ValueEl  = document.getElementById('co2Value');
 const progressEl  = document.getElementById('progressFill');
 const progressBar = progressEl.parentElement;
@@ -7,9 +10,6 @@ const foodItems   = document.querySelectorAll('.food-item');
 const emptyState  = document.getElementById('emptyState');
 const highCountEl = document.getElementById('highCount');
 const lowCountEl  = document.getElementById('lowCount');
-
- const CO2_SAVED    = 12.4;
- const MONTHLY_GOAL = 20;
 
   co2Display.textContent = co2Saved.toFixed(1);
 
