@@ -1,3 +1,24 @@
+*,*::before, *::after {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+:root:{
+  --green-dark:  #1a4731;
+  --green-mid:   #2d7a4f;
+  --green-light: #6abf8a;
+  --green-pale:  #e6f4ec;
+  --red-dark:    #8b1a1a;
+  --red-pale:    #fdecea;
+  --sand:        #faf8f3;
+  --ink:         #1c1c1c;
+  --muted:       #6b7280;
+  --white:       #ffffff;
+  --radius:      #14px;
+  --shadow:      0 2px 16px rgba(0, 0, 0, 0.07);
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
