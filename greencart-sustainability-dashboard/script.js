@@ -33,6 +33,8 @@ function initProgress() {
   progressEl.style.width = pct + '%';
   progressBar.setAttribute('aria-valuenow', Math.round(pct));
 
+
+
   if (pct>= 100) {
     co2Badge.textContent = '🎉 Goal  reached!';
   } else if (pct>= 60) {
@@ -41,6 +43,21 @@ function initProgress() {
     co2Badge.textContent = '💪 Keep going';
   }
 }
+
+function updateChips(filter) {
+  let high = 0;
+  let low  = 0;
+
+  foodItems.forEach(item => {
+    const visible = filter === 'all' || item.dataset.impact === filter;
+    if (visible) {
+      if (item.dataset.impact === 'high') high++;
+      else low++;
+    }
+  });
+
+  highCountEl.textContent = `🔴 ${high} high impact;`
+  lowCountEl.textContent =  `🟢 ${low} low impact`;
 
   filterButtons.forEach(button => { 
     
