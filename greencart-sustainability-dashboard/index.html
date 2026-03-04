@@ -8,8 +8,8 @@
 </head>
 <body>
 
-<header class="dashboard-header">
-  <h1>Sustainability Dashboard</h1>
+<header class="dashboard-header"> 
+  <h1>🌿Sustainability Dashboard</h1>
   <p>Track your grocery choices and make sustainable choices.</p>
 </header>
 
@@ -20,6 +20,7 @@
     <h2 id="co2-heading">CO₂ Savings</h2>
 
     <div class="co2-display">
+       <span class="co2-number" id="co2Value" aria-live="polite" aria-atomic="true">0</span>
       <span id="co2Value">0</span> kg saved this month
     </div>
 
@@ -28,24 +29,29 @@
     </div>
 
     <p class="goal-text">Monthly Goal: 20kg CO₂</p>
+    <span class="co2-badge" id="co2Badge">🌱 On track</span>
   </section>
 
 
   <section class="card filter-card" aria-labelledby="filter-heading">
-    <h2 id="filter-heading">Filter by Environmental Impact</h2>
-
+    <h2 id="filter-heading">Filter by Impact</h2>
+    <p class="hint">Toggle between food items by their environmental impact level.</p>
     <div class="button-group" role="group" aria-label="Impact filter">
-      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn active" data-filter="all"  aria-pressed="true">All</button>
       <button class="filter-btn" data-filter="high" aria-pressed="false">High Impact</button>
-      <button class="filter-btn" data-filter="low"aria-pressed="false">Low Impact</button>
+      <button class="filter-btn" data-filter="low"  aria-pressed="false">Low Impact</button>
+    </div>
+    <div class="count-row" aria-live="polite" aria-atomic="true">
+      <span class="count-chip high" id="highCount"></span>
+      <span class="count-chip low"  id="lowCount"></span>
     </div>
   </section>
 
 
   <section class="card food-card" aria-labelledby="food-heading">
     <h2 id="food-heading">Food Items</h2>
+    <div class="food-grid" id="foodGrid">
 
-    <div class="food-grid">
       <article class="food-item high" data-impact="high">
         <h3>Beef</h3>
         <p>Very high carbon footprint due to livestock emissions</p>
@@ -65,17 +71,21 @@
         <h3>Oat Milk</h3>
         <p>Lower environmental impact compared to dairy milk</p>
       </article>
+
+      <p id="emptyState" role="status">No items match this filter.</p>
     </div>
   </section>
 
 
+
   <section class="card swaps-card" aria-labelledby="swaps-heading">
     <h2 id="swaps-heading">Sustainable Swaps</h2>
+    <div class="swaps-grid">
 
-    <div class="swap">
+    <div class="swap"
       <p><strong>Swap:</strong> Beef → Lentils</p>
       <p>Reduce emissions by up to 70%</p>
-    </div>
+    </>
 
     <div class="swap">
       <p><strong>Swap:</strong> Milk → Oat Milk</p>

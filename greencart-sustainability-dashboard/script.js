@@ -17,10 +17,11 @@ const progressFill = document.getElementById("progressFill")
     
     button.addEventListener("click", () => {
 
-      filterButtons.forEach(btn => 
-        btn.classList.remove("active"));
+      filterButtons.forEach(btn => {
+        btn.classList.remove("active");
         btn.setAttribute("aria-pressed", "false");
-    });
+      });
+
       button.classList.add("active");
       button.setAttribute("aria-pressed", "true");
 
@@ -28,7 +29,7 @@ const progressFill = document.getElementById("progressFill")
 
       foodItems.forEach(item => {
 
-      if (filterValue === "all" || item.dataset.impact === filter.Value) {
+      if (filterValue === "all" || item.dataset.impact === filterValue) {
         item.classList.remove("hidden");
       } else {     
         item.classList.add("hidden");

@@ -81,6 +81,11 @@ body {
 .filter-btn.active {
   background-color: #2e7d32;
   color: white;
+  transform: scale(1.05);
+}
+
+.filter-btn:hover {
+  background-color: #a5d6a7;
 }
 
 .food-grid {
@@ -94,6 +99,7 @@ body {
   padding: 15px;
   border-radius: 8px;
   background-color: #f9f9f9;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .food-item.high {
