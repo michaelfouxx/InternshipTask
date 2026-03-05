@@ -51,11 +51,18 @@ Committed changes incrementally by feature and file, with descriptive commit mes
 ## Features
 
 **CO₂ Savings counter** — animated count-up on page load with a dynamic status badge
+
 **Progress bar** — shows progress toward the moonthly goal 20kg CO₂ goal
+
 **Filter buttons** — toggle between All, High Impact and Low Impact food items
+
 **Search bar** — live search filtering food items by name
+
 **Impact count chips** — shows how many high and low impact items are currently visible
+
 **Sustainable Swaps section** — suggests direct food subscriptions with emissios savivngs
+
 **Fully responsive** — works on mobile, tablet, and desktop
+
 **Accessible** — skip link, ARIA attributes, keyboard focus styles and screen reader support
 
