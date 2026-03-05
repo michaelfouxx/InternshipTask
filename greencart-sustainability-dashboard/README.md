@@ -40,10 +40,30 @@ Used template literals for the count chip text content to keep the code clean an
 
 Constants are written in `UPPER_CASE` to signal they are fixed config values, following standard JS conventions.
 
-## Fonts -
+## Fonts
 
 Used **DM Serif Display** for headings and **DM Sans** for body text, loaded via Google Fonts. These were chosen for their clean, professional aesthetic suited to an environmental dashboard.
 
-## Version Control -
+## Version Control
 
 Committed changes incrementally by feature and file, with descriptive commit messages that reflect what changed and why.
+
+## Features
+
+**CO₂ Savings counter** — animated count-up on page load with a dynamic status badge
+
+**Progress bar** — shows progress toward the moonthly goal 20kg CO₂ goal
+
+**Filter buttons** — toggle between All, High Impact and Low Impact food items
+
+**Search bar** — live search filtering food items by name
+
+**Impact count chips** — shows how many high and low impact items are currently visible
+
+**Sustainable Swaps section** — suggests direct food subscriptions with emissios savivngs
+
+**Fully responsive** — works on mobile, tablet, and desktop
+
+**Accessible** — skip link, ARIA attributes, keyboard focus styles and screen reader support
+
+
