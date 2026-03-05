@@ -12,6 +12,8 @@ Used semantic elements throughout — `<header>`, `<main>`, `<section>`, `<artic
 
 Added ARIA attributes(`aria-labelledby`, `aria-live`, `aria-pressed`, `role="progressbar"`) to meet accessibility standards.
 
+Included a skip link so keyboard users ca bypass the header and jump straight to the main content.
+
 ## CSS3
 
 Used CSS custom properties (variables) in `:root` to define the colour palette in one place, making the design easy to maintain and update.
@@ -22,7 +24,7 @@ Used `clamp()` for fluid typography on the header, scaling the font size smoothl
 
 Separated the hidden state into classes — `.hidden` fades items out via CSS transition, then `.collapsed` removes them from the layout after the animation ends, preventing empty gaps.
 
-Used `@media` breakpoints at `600px`, `768px`, and `900px` for a fully responsive layout
+Used `@media` breakpoints at `600px`, `768px`, and `900px` for a fully responsive layout.
 
 ## JavaScript
 
@@ -50,7 +52,7 @@ Committed changes incrementally by feature and file, with descriptive commit mes
 
 **CO₂ Savings counter** — animated count-up on page load with a dynamic status badge
 
-**Progress bar** — shows progress toward the monthly goal 20kg CO₂ goal
+**Progress bar** — shows progress toward the monthly 20kg CO₂ goal
 
 **Filter buttons** — toggle between All, High Impact and Low Impact food items
 
