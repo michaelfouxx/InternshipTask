@@ -12,7 +12,7 @@ Used semantic elements throughout — `<header>`, `<main>`, `<section>`, `<artic
 
 Added ARIA attributes(`aria-labelledby`, `aria-live`, `aria-pressed`, `role="progressbar"`) to meet accessibility standards.
 
-Included a skip link so keyboard users ca bypass the header and jump straight to the main content.
+Included a skip link so keyboard users can bypass the header and jump straight to the main content.
 
 ## CSS3
 
