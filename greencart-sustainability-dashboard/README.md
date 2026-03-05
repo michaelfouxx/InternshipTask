@@ -30,7 +30,7 @@ Used `@media` breakpoints at `600px`, `768px`, and `900px` for a fully responsiv
 
 Wrapped all initialisation logic in `window.addEventListener('load')` to ensure the DOM is fully ready before any JS runs.
 
-Used `requestAnimationFrame` with an ease-out cubic function to animate the C0₂ counter smoothly from 0 to the target value on page load.
+Used `requestAnimationFrame` with an ease-out cubic function to animate the CO₂ counter smoothly from 0 to the target value on page load.
 
 Separated filter logic into a dedicated  `applyFilter()` function and search logic into its own event listener, keeping concerns clearly separated.
 
@@ -52,7 +52,7 @@ Committed changes incrementally by feature and file, with descriptive commit mes
 
 **CO₂ Savings counter** — animated count-up on page load with a dynamic status badge
 
-**Progress bar** — shows progress toward the moonthly goal 20kg CO₂ goal
+**Progress bar** — shows progress toward the monthly goal 20kg CO₂ goal
 
 **Filter buttons** — toggle between All, High Impact and Low Impact food items
 
@@ -60,7 +60,7 @@ Committed changes incrementally by feature and file, with descriptive commit mes
 
 **Impact count chips** — shows how many high and low impact items are currently visible
 
-**Sustainable Swaps section** — suggests direct food subscriptions with emissios savivngs
+**Sustainable Swaps section** — suggests direct food substitutions with emissions savings
 
 **Fully responsive** — works on mobile, tablet, and desktop
 
