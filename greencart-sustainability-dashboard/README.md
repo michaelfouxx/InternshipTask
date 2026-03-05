@@ -6,8 +6,6 @@ A responsive web dashboard that helps users track their grocery choices and redu
 
 This dashboard was built as part of a front-end development assessment. It allows users to view their monthly CO₂ savings, filter food items by environmental impact, search for specific foods and discover sustainable swaps.
 
-
-
 ## HTML5
 
 Used semantic elements throughout — `<header>`, `<main>`, `<section>`, `<article>`, `<footer>` - to give the page meaningful structure for both browsers and screen readers.
@@ -66,3 +64,10 @@ Committed changes incrementally by feature and file, with descriptive commit mes
 
 **Accessible** — skip link, ARIA attributes, keyboard focus styles and screen reader support
 
+## Files
+
+| File | Purpose |
+|---|---|
+|`index.html` | Page structure and content |
+|`style.css` | All styling, layout and responsive breakpoints |
+|`script.js` | Interactivity — counter animation, filtering and search |
