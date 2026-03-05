@@ -40,10 +40,10 @@ Used template literals for the count chip text content to keep the code clean an
 
 Constants are written in `UPPER_CASE` to signal they are fixed config values, following standard JS conventions.
 
-## Fonts
+## Fonts -
 
 Used **DM Serif Display** for headings and **DM Sans** for body text, loaded via Google Fonts. These were chosen for their clean, professional aesthetic suited to an environmental dashboard.
 
-## Version Control
+## Version Control -
 
 Committed changes incrementally by feature and file, with descriptive commit messages that reflect what changed and why.
