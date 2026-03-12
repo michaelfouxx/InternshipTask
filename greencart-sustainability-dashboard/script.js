@@ -65,12 +65,25 @@ function updateChips(filter) {
 
 searchInput.addEventListener('input', () => {
   const query = searchInput.value.toLowerCase();
-   foodItems.forEach(item => {
+  const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+  let visibleCount = 0;
+
+  foodItems.forEach(item => {
     const name = item.querySelector('h3').textContent.toLowerCase();
-    const matches = name.includes(query);
-    item.classList.toggle('collapsed', !matches);
+    const matchesSearch = name.includes(query);
+    const matchesFilter = activeFilter === 'all' || item.dataset.impact === activeFilter;
+
+    if (matchesSearch && matchesFilter) {
+      item.classList.remove('collapsed');
+      visibleCount++;
+    } else {
+      item.classList.add('collapsed');
+    }
   });
+
+  emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
 });
+
 
 function applyFilter(filter) {
   let visibleCount = 0;
